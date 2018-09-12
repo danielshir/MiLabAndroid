@@ -1,5 +1,6 @@
 package com.idc.milab.milabandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,18 +12,6 @@ public class MainActivity extends AppCompatActivity {
 	private static final String TAG = "MainActivity";
 
 	@Override
-	protected void onStart() {
-		super.onStart();
-		Log.d(TAG, "onStart called");
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		Log.d(TAG, "onResume called");
-	}
-
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -31,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 		pushButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Log.d(TAG, "Pushed button");
-				Toast.makeText(view.getContext(), "Hello World!", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(view.getContext(), SecondActivity.class);
+				startActivity(intent);
 			}
 		});
 	}
