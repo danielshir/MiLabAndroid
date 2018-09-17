@@ -3,6 +3,8 @@ package com.idc.milab.milabandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,13 +18,8 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Button pushButton = (Button)findViewById(R.id.button);
-		pushButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Intent intent = new Intent(view.getContext(), SecondActivity.class);
-				startActivity(intent);
-			}
-		});
+		RecyclerView recyclerView = (RecyclerView)findViewById(R.id.list);
+		recyclerView.setLayoutManager(new LinearLayoutManager(this));
+		recyclerView.setAdapter(new ListAdapter(new String[]{"item 1", "item 2", "item 3"}));
 	}
 }
