@@ -10,6 +10,6 @@ public class ExampleReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Log.i(TAG, "screen is now on");
+		Log.i(TAG, "notification was tapped");
 	}
 }
