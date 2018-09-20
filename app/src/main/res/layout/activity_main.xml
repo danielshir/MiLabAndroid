@@ -16,13 +16,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btnNotify"
+            android:id="@+id/btnRun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="314dp"
-            android:layout_marginStart="139dp"
-            android:text="Notify"
+            android:layout_marginBottom="241dp"
+            android:layout_marginStart="146dp"
+            android:text="Run Task"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btnNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="94dp"
+            android:layout_marginEnd="91dp"
+            android:text="Run Network Request"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
